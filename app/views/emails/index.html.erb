@@ -1,2 +1,39 @@
-<h1>Emails#index</h1>
-<p>Find me in app/views/emails/index.html.erb</p>
+<div class="container">
+
+<h1> List of all emails</h1>
+
+<div class="email-table">
+
+<table class="table" id="emails">
+  <tr>
+    <th> Mail (unread: <%= @emails_unread.count %>)</th>
+    <th> Received on</th>
+
+  </tr>
+
+  <% @emails.each do |email| %>
+    
+
+  <% if email.read === false %>
+    <tr id="email_<%=email.id%>" class="email_unread">
+      <td ><%= link_to email.object, email_path(email), remote: true %></td>
+      <td> <%= email.created_at.strftime("%d-%m-%Y") %> </td>
+
+    </tr>
+
+    <%else %>
+    <tr id="email_read">
+      <td ><%= link_to email.object, email_path(email), remote: true %></td>
+      <td> <%= email.created_at.strftime("%d-%m-%Y") %> </td>
+
+      </tr>
+  <% end %>  
+  <% end %>
+
+</table>
+
+<div id="content">
+    <div id="email-body" style="display:none"> </div>
+</div>
+</div>
+</div>

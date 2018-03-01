@@ -1,2 +1,54 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
+
+html {
+    height: 100%;
+}
+
+* {
+  padding: 0px;
+}
+
+body {
+	height: 100%;
+	font-family: 'Raleway', sans-serif;
+}
+
+h1 {
+	margin-bottom: 50px;
+}
+
+#emails {
+	width: 50%;
+}
+
+.email-table {
+	display: flex;
+}
+
+#content {
+	height: 300px;
+	border: 1px solid grey;
+	width: 50%;
+	display: flex;
+	padding: 10px;
+}
+
+#email_read {
+	color:rgb(138,138,138);
+	a {
+    text-decoration: none;
+  	color:rgb(138,138,138);
+	}
+
+}
+
+.email_unread {
+	background-color: rgb(242,242,242);
+	a {
+	color:black;
+    text-decoration: none;
+    font-weight: bold;
+	}
+}
+
