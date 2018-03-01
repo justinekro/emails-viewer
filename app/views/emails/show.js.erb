@@ -1,8 +1,8 @@
 
 $('#email-body').html("<%= j (render 'show') %>");
 $('#email-body').slideDown(350);
-$('#uemail_<%=@email.id%> a').css({'color' : 'rgb(138,138,138'});
-$('#uemail_<%=@email.id%>').css({'background-color' : 'white', 'color':'rgb(138,138,138)'});
-$('#count').text("Mail (unread: <%= @emails_unread.count %>)");
+$('#uemail_<%=@email.id%> a').css({'color' : 'rgb(138,138,138','font-weight': '400'});
+$('#uemail_<%=@email.id%>').css({'background-color' : 'white', 'color':'rgb(138,138,138)','font-weight': '400'});
+$('#count').text("Mails (unread: <%= @emails_unread.count %>)");
 
 $('#unread_button_<%=@email.id%>').show();
