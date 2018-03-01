@@ -1,6 +1,6 @@
-<p> Object : <%= @email.object %></p>
+
+<p class="object"> Object : <%= @email.object %></p>
 <p> <%= @email.body %></p>
-<p> <%= @email.read %> </p>
 
 <%= link_to @email, remote: true, method: :delete,  class: "delete_email", data: { confirm: 'Are you sure?' } do %>
   <button class="btn btn-warning">Delete this mail</button>

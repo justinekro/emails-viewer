@@ -8,6 +8,7 @@ class EmailsController < ApplicationController
   end
 
   def show
+    all_emails
 		@email = Email.find(params[:id])
     @email.read = true
     @email.save

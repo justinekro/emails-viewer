@@ -3,3 +3,4 @@ $('#email-body').slideDown(350);
 $('#email_<%=@email.id%> a').css({'color' : 'rgb(138,138,138'})
 $('#email_<%=@email.id%>').css({'background-color' : 'white', 'color':'color:rgb(138,138,138)'})
 
+$('#count').text("Mail (unread: <%= @emails_unread.count %>)")

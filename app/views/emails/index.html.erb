@@ -6,7 +6,7 @@
 
 <table class="table" id="emails">
   <tr>
-    <th> Mail (unread: <%= @emails_unread.count %>)</th>
+    <th id="count"> Mail (unread: <%= @emails_unread.count %>)</th>
     <th> Received on</th>
 
   </tr>
@@ -18,15 +18,13 @@
     <tr id="email_<%=email.id%>" class="email_unread">
       <td ><%= link_to email.object, email_path(email), remote: true %></td>
       <td> <%= email.created_at.strftime("%d-%m-%Y") %> </td>
-
     </tr>
 
     <%else %>
     <tr id="email_read">
-      <td ><%= link_to email.object, email_path(email), remote: true %></td>
+      <td><%= link_to email.object, email_path(email), remote: true%></td>
       <td> <%= email.created_at.strftime("%d-%m-%Y") %> </td>
-
-      </tr>
+    </tr>
   <% end %>  
   <% end %>
 

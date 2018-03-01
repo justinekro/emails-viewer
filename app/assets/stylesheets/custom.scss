@@ -20,6 +20,10 @@ h1 {
 
 #emails {
 	width: 50%;
+
+	td {
+		border-bottom:1px solid;
+	}
 }
 
 .email-table {
@@ -32,6 +36,12 @@ h1 {
 	width: 50%;
 	display: flex;
 	padding: 10px;
+	.object {
+		font-weight: bolder;
+		font-size: 20px;
+
+
+	}
 }
 
 #email_read {
